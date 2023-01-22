@@ -1,0 +1,22 @@
+.signin{
+    background-color: rgba(210, 105, 30, 0.413);
+}
+
+.text-input-box {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.text-input-box > p {
+    font-weight: bold;
+}
+
+.text-input-box > input {
+    font-size: 15;
+    padding: 7px;
+}
+
+.signin-border{
+    border-top: 3px solid rgb(250, 118, 23);
+}
