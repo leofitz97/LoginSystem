@@ -22,8 +22,9 @@ const Signin = () => {
   const signIn=()=>{
     fetch('http://localhost:5000/signin', {
       method: 'POST',
+      credentials: 'include',
       headers: {'Content-Type':'application/json'},
-      body: JSON.stringify({email:email, password:password})
+      body: JSON.stringify({email:email, password:password, rememberMe:rememberMe}),
     })
     .then(res=>res.json())
     .then(res=>{
@@ -40,6 +41,7 @@ const Signin = () => {
   useEffect(()=>{
     fetch('http://localhost:5000/', {
       method: 'GET',
+      credentials: 'include',
       headers: {'Content-Type':'application/json'}
     })
     .then(res=>res.json())
